@@ -13,7 +13,7 @@ Travel the world through the prism of music. Tune in to get the hottest tracks i
 
 ### Pipe usage
 Use powershell to run the script getAllData.ps1 (no arguments passed).
-The script uses countries.csv, which is specified with an absolute path.
+The script uses Data/countries.txt, which is specified with an absolute path in the code.
 
 ## Contributors
 - Stefan Ananiev 181039 stefan.ananiev@finki.ukim.mk
