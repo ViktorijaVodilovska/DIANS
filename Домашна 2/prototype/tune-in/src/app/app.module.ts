@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { MapBackgroundComponent } from './components/map/map-background/map-background.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MapBackgroundComponent
   ],
   imports: [
     BrowserModule,
