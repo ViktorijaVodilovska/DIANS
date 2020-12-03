@@ -5,11 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MapBackgroundComponent } from './components/map/map-background/map-background.component';
 import { HeaderMenuComponent } from './components/header/header-menu/header-menu.component';
-import { FormsModule } from '@angular/forms';
-import { MatTooltipModule } from '@angular/material/tooltip';
 @NgModule({
   declarations: [AppComponent, MapBackgroundComponent, HeaderMenuComponent],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
 })
