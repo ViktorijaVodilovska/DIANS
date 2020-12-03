@@ -2,6 +2,10 @@
   font-family: abduction2002;
   src: url(../../../../assets/Fonts/abduction2002.ttf);
 }
+@font-face {
+  font-family: VCR_OSD_MONO;
+  src: url(../../../../assets/Fonts/VCR_OSD_MONO_1.001.ttf);
+}
 .header {
   background-color: #003b5b;
   height: fit-content;
@@ -9,7 +13,6 @@
   position: fixed;
   border-radius: 0 0 30px 0;
   z-index: 100;
-  padding-bottom: 5px;
   opacity: 0.8;
 }
 .logo {
@@ -24,4 +27,93 @@
   float: right;
   height: 100px;
   width: 100px;
+}
+
+.mood-popup {
+  height: fit-content;
+  width: fit-content;
+  padding: 0px 20px 5px 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  float: right;
+  margin-right: 77px;
+  opacity: 0.8;
+}
+.mood-label {
+  color: rgb(61, 61, 61);
+  font-size: large;
+  font-family: VCR_OSD_MONO;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+.mood-label:active {
+  color: rgb(0, 182, 0);
+}
+.triangle {
+  z-index: 101;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 11.5px 24px 11.5px;
+  border-color: transparent transparent #ffffff transparent;
+  top: -17px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: relative;
+}
+.header2 {
+  position: fixed;
+  width: 90%;
+  top: 80px;
+  z-index: 100;
+}
+
+.class-green {
+  color: rgb(0, 182, 0);
+}
+.class-gray {
+  color: rgb(61, 61, 61);
+}
+/*tooltip*/
+/* Tooltip container */
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  float: right;
+  right: -8px;
+  top: 70px;
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+.tooltip .tooltiptext2 {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  float: right;
+  right: 86px;
+  top: 70px;
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+.tooltip:hover .tooltiptext2 {
+  visibility: visible;
 }

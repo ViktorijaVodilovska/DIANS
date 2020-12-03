@@ -1,12 +1,31 @@
 <div class="header">
   <label class="logo">Tune In</label>
-  <a href="#" class="weather">
+  <a href="#" class="weather tooltip">
+    <span class="tooltiptext">Play a song according to your local weather</span>
     <img
       class="weather_img"
       src="../../../../assets/Icons/broken clouds-01.png"
     />
   </a>
-  <a href="#" class="mood">
+  <a
+    style="cursor: pointer"
+    class="mood tooltip"
+    matTooltip="Choose your mood and enjoy"
+    (click)="show = !show"
+  >
+    <span class="tooltiptext2">Play a song according to your mood</span>
     <img class="mood_img" src="../../../../assets/Icons/feelgood yellow.png" />
   </a>
+</div>
+<div class="header2" *ngIf="show">
+  <div class="mood-popup">
+    <div class="triangle"></div>
+    <a class="mood-label">feel good</a>
+    <a class="mood-label">festive</a>
+    <a class="mood-label">happy</a>
+    <a class="mood-label">moody</a>
+    <a class="mood-label">productive</a>
+    <a class="mood-label">relaxed</a>
+    <a class="mood-label">sad</a>
+  </div>
 </div>

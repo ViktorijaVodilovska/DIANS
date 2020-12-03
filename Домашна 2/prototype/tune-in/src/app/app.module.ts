@@ -5,25 +5,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MapBackgroundComponent } from './components/map/map-background/map-background.component';
 import { HeaderMenuComponent } from './components/header/header-menu/header-menu.component';
-import { MoodPopupComponent } from './components/header/mood-list/mood-popup/mood-popup.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { IgxButtonModule, IgxToggleModule } from 'igniteui-angular';
 import { FormsModule } from '@angular/forms';
+import { MatTooltipModule } from '@angular/material/tooltip';
 @NgModule({
-  declarations: [
-    AppComponent,
-    MapBackgroundComponent,
-    HeaderMenuComponent,
-    MoodPopupComponent,
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    FormsModule,
-    IgxButtonModule,
-    IgxToggleModule,
-  ],
+  declarations: [AppComponent, MapBackgroundComponent, HeaderMenuComponent],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
