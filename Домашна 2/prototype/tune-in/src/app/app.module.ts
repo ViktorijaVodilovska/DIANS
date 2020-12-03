@@ -11,14 +11,14 @@ import { PlaylistContainerComponent } from './components/playlist/playlist-conta
   declarations: [
     AppComponent,
     MapBackgroundComponent,
-    PlaylistContainerComponent,
-    HeaderMenuComponent
+    HeaderMenuComponent,
+    PlaylistContainerComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
   providers: [],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
