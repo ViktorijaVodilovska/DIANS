@@ -23,7 +23,8 @@ export class MapBackgroundComponent implements AfterViewInit {
       maxZoom: 4,
       maxBoundsViscosity: 1.0,
     });
-
+    //remove zoom control buttons from map
+    this.map.zoomControl.remove();
     //set map bounds
     var southWest = L.latLng(-89.98155760646617, -180),
       northEast = L.latLng(89.99346179538875, 180);

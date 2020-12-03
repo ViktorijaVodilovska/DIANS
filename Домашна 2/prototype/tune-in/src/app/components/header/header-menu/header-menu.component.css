@@ -19,3 +19,9 @@
   vertical-align: middle;
   float: left;
 }
+.weather_img,
+.mood_img {
+  float: right;
+  height: 100px;
+  width: 100px;
+}
