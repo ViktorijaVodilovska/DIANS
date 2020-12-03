@@ -5,11 +5,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MapBackgroundComponent } from './components/map/map-background/map-background.component';
 import { HeaderMenuComponent } from './components/header/header-menu/header-menu.component';
-import { FormsModule } from '@angular/forms';
-import { MatTooltipModule } from '@angular/material/tooltip';
+import { PlaylistContainerComponent } from './components/playlist/playlist-container/playlist-container.component';
+
 @NgModule({
-  declarations: [AppComponent, MapBackgroundComponent, HeaderMenuComponent],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  declarations: [
+    AppComponent,
+    MapBackgroundComponent,
+    PlaylistContainerComponent,
+    HeaderMenuComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

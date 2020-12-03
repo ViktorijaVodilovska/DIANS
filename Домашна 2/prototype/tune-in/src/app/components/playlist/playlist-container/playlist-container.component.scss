@@ -1,0 +1,79 @@
+.playlist-container{
+  width: fit-content;
+  height: 380px;
+  position: fixed;
+  z-index: 1000;
+  top: 30%;
+  border-radius: 6px;
+}
+
+.spotify {
+  border-bottom-right-radius: 6px;
+  border-top-right-radius: 6px;
+  opacity: 0.6;
+}
+
+.playlist-button {
+  cursor: pointer;
+  background-color: black;
+  opacity: 0.8;
+  color: white;
+  float: left;
+  width: 2em;
+  position: relative;
+  top: 30%;
+  margin-right: 5px;
+  border-bottom-right-radius: 6px;
+  border-top-right-radius: 6px;
+  border: solid black;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  label {
+    writing-mode: vertical-rl;
+    cursor: pointer;
+    font-family: "Arial Black";
+  }
+}
+
+//.playlist {
+//  background-color: #003b5b;
+//  opacity: 0.8;
+//  overflow-y: scroll;
+//  float: right;
+//  height: 100%;
+//  border-radius: 6px;
+//}
+//
+//
+//.song-entry{
+//  height: fit-content;
+//  color: white;
+//  padding: 20px;
+//  font-family: Arial;
+//}
+//
+//.title {
+//  float: left;
+//}
+//.artist{
+//  float: right;
+//  margin-left: 10px;
+//}
+//
+//.playlist::-webkit-scrollbar-track
+//{
+//  visibility: hidden;
+//}
+//
+//.playlist::-webkit-scrollbar
+//{
+//  visibility: hidden;
+//
+//}
+//
+//.playlist::-webkit-scrollbar-thumb
+//{
+//  border-radius: 10px;
+//  background-color: #0f2443;
+//}
+//
