@@ -2,19 +2,19 @@
   <label class="logo">Tune In</label>
   <a href="#" class="weather tooltip">
     <span class="tooltiptext">Play a song according to your local weather</span>
-    <img
-      class="weather_img"
-      src="../../../../assets/Icons/broken clouds-01.png"
-    />
+    <img class="icon_img" src="../../../../assets/Icons/home.png"/>
   </a>
-  <a
-    style="cursor: pointer"
-    class="mood tooltip"
-    matTooltip="Choose your mood and enjoy"
-    (click)="show = !show"
-  >
-    <span class="tooltiptext2">Play a song according to your mood</span>
-    <img class="mood_img" src="../../../../assets/Icons/feelgood yellow.png" />
+  <a href="#" class="weather tooltip">
+    <span id="about_tooltip" class="tooltiptext">Play a song according to your local weather</span>
+    <img class="icon_img" src="../../../../assets/Icons/about.png"/>
+  </a>
+  <a href="#" class="weather tooltip">
+    <span id="weather_tooltip" class="tooltiptext">Play a song according to your local weather</span>
+    <img class="icon_img" src="../../../../assets/Icons/broken clouds-01.png"/>
+  </a>
+  <a style="cursor: pointer" class="mood tooltip" (click)="show = !show">
+    <span id="mood_tooltip" class="tooltiptext">Play a song according to your mood</span>
+    <img class="icon_img" src="../../../../assets/Icons/happy.png" />
   </a>
 </div>
 <div class="header2" *ngIf="show">
