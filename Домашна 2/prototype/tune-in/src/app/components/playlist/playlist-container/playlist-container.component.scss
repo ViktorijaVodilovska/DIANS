@@ -1,3 +1,8 @@
+@font-face {
+  font-family: commons-medium;
+  src: url(../../../../assets/Fonts/TTCommons-Medium.ttf);
+}
+
 .playlist-container{
   width: fit-content;
   height: 380px;
@@ -10,28 +15,28 @@
 .spotify {
   border-bottom-right-radius: 6px;
   border-top-right-radius: 6px;
-  opacity: 0.6;
+  opacity: 0.7;
 }
 
 .playlist-button {
   cursor: pointer;
   background-color: black;
-  opacity: 0.8;
   color: white;
   float: left;
   width: 2em;
   position: relative;
   top: 30%;
   margin-right: 5px;
-  border-bottom-right-radius: 6px;
-  border-top-right-radius: 6px;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
   border: solid black;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  opacity: 0.7;
   label {
     writing-mode: vertical-rl;
     cursor: pointer;
-    font-family: "Arial Black";
+    font-family:commons-medium;
   }
 }
 
