@@ -14,13 +14,10 @@ import { AboutUsComponent } from './components/about/about-us/about-us.component
     MapBackgroundComponent,
     HeaderMenuComponent,
     PlaylistContainerComponent,
-    AboutUsComponent
+    AboutUsComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
