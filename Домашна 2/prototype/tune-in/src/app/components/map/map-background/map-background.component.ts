@@ -1,4 +1,5 @@
 import { Component, AfterViewInit } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 import { from } from 'rxjs';
 import * as L from 'leaflet';
 @Component({

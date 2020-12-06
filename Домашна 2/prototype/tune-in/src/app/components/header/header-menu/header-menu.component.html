@@ -1,19 +1,22 @@
 <div class="header">
-  <label class="logo">Tune In</label>
-  <a href="#" class="weather tooltip">
+  <label class="logo" routerLink="" style="cursor: pointer">Tune In</label>
+  <a class="weather tooltip">
     <span class="tooltiptext">Play a song according to your local weather</span>
-    <img class="icon_img" src="../../../../assets/Icons/home.png"/>
+    <img class="icon_img" src="../../../../assets/Icons/home.png" />
+  </a>
+  <a routerLink="/about" class="about">
+    <img class="icon_img" src="../../../../assets/Icons/about.png" />
   </a>
   <a href="#" class="weather tooltip">
-    <span id="about_tooltip" class="tooltiptext">Play a song according to your local weather</span>
-    <img class="icon_img" src="../../../../assets/Icons/about.png"/>
-  </a>
-  <a href="#" class="weather tooltip">
-    <span id="weather_tooltip" class="tooltiptext">Play a song according to your local weather</span>
-    <img class="icon_img" src="../../../../assets/Icons/broken clouds-01.png"/>
+    <span id="weather_tooltip" class="tooltiptext"
+      >Play a song according to your local weather</span
+    >
+    <img class="icon_img" src="../../../../assets/Icons/broken clouds-01.png" />
   </a>
   <a style="cursor: pointer" class="mood tooltip" (click)="show = !show">
-    <span id="mood_tooltip" class="tooltiptext">Play a song according to your mood</span>
+    <span id="mood_tooltip" class="tooltiptext"
+      >Play a song according to your mood</span
+    >
     <img class="icon_img" src="../../../../assets/Icons/happy.png" />
   </a>
 </div>

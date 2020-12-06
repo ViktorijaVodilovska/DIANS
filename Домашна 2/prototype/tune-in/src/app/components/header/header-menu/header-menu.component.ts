@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header-menu',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderMenuComponent implements OnInit {
   show = false;
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {}
 }
