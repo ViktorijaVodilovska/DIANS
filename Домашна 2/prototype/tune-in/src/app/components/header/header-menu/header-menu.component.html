@@ -1,20 +1,24 @@
 <div class="header">
   <div class="logo-containter"><label class="logo">Tune In</label></div>
   <a class="weather icon">
-    <span id="weather_tooltip" class="tooltiptext">Play a song according to your local weather</span>
-    <img class="icon_img" src="../../../../assets/Icons/few clouds.png"/>
+    <span id="weather_tooltip" class="tooltiptext"
+      >Play a song according to your local weather</span
+    >
+    <img class="icon_img" src="../../../../assets/Icons/few clouds.png" />
   </a>
   <a class="mood icon" (click)="show = !show">
-    <span id="mood_tooltip" class="tooltiptext">Play a song according to your mood</span>
+    <span id="mood_tooltip" class="tooltiptext"
+      >Play a song according to your mood</span
+    >
     <img class="icon_img" src="../../../../assets/Icons/happy.png" />
   </a>
-  <a class="about icon">
+  <a routerLink="about" class="about icon">
     <span id="about_tooltip" class="tooltiptext">About</span>
-    <img class="icon_img" src="../../../../assets/Icons/about.png"/>
+    <img class="icon_img" src="../../../../assets/Icons/about.png" />
   </a>
-  <a class="home icon">
+  <a routerLink="" class="home icon">
     <span id="home_tooltip" class="tooltiptext">Home</span>
-    <img class="icon_img" src="../../../../assets/Icons/home.png"/>
+    <img class="icon_img" src="../../../../assets/Icons/home.png" />
   </a>
 </div>
 <div class="header2" *ngIf="show">

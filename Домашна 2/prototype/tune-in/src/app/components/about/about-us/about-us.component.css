@@ -5,4 +5,26 @@
 
 .about-us {
   font-family: commons-medium;
+  background-color: #144552;
+  height: 100%;
+  width: 100%;
+  color: white;
+  overflow-x: hidden;
+}
+.content-about-us {
+  left: 10px;
+  position: relative;
+  top: 150px;
+}
+.about-us-title {
+  font-size: 55px;
+  color: #6bb2c5;
+  font-weight: 600;
+  text-shadow: 2px 2px #000000;
+}
+.catchy-quote,
+.description-p1 {
+  margin-top: 40px;
+  font-size: xx-large;
+  line-height: normal;
 }

@@ -15,6 +15,7 @@
   border-radius: 0 0 30px 0;
   z-index: 100;
   opacity: 0.7;
+  box-shadow: 10px 10px 28px 0px rgba(14, 13, 13, 0.75);
 }
 .logo-containter {
   height: fit-content;
@@ -97,13 +98,13 @@
   z-index: 1;
 }
 
-#about_tooltip{
+#about_tooltip {
   right: 200px;
 }
-#home_tooltip{
-   right: 300px;
- }
-#weather_tooltip{
+#home_tooltip {
+  right: 300px;
+}
+#weather_tooltip {
   right: 0px;
 }
 #mood_tooltip {
@@ -111,7 +112,6 @@
 }
 
 /* Show the tooltip text when you mouse over the tooltip container */
-.icon:hover .tooltiptext{
+.icon:hover .tooltiptext {
   visibility: visible;
 }
-
