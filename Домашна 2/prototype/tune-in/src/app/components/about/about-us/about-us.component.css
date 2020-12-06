@@ -1,0 +1,8 @@
+@font-face {
+  font-family: commons-medium;
+  src: url(../../../../assets/Fonts/TTCommons-Medium.ttf);
+}
+
+.about-us {
+  font-family: commons-medium;
+}
