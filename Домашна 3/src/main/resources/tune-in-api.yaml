@@ -1,0 +1,118 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: Tune In
+  description: Playlists based on mood, country, weather
+
+# Added by API Auto Mocking Plugin
+servers:
+  # Added by API Auto Mocking Plugin
+  - description: SwaggerHub API Auto Mocking
+    url: /api/v1
+
+paths:
+  /weather:
+    post:
+      summary: Get playlist based on weather
+      operationId: getWeatherPlaylist
+      tags:
+        - weather
+      description: Get playlist based on weather
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/WeatherRequest'
+      responses:
+        '200':
+          $ref: '#/components/responses/PlaylistResponse'
+        '405':
+          description: invalid input
+        '404':
+          description: not found
+  /country:
+    post:
+      summary: Get playlist based on country
+      operationId: getCountryPlaylist
+      tags:
+        - country
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CountryRequest'
+      responses:
+        '200':
+          $ref: '#/components/responses/PlaylistResponse'
+        '405':
+          description: invalid input
+        '404':
+          description: not found
+  /mood:
+    post:
+      summary: Get playlist based on mood
+      operationId: getMoodPlaylist
+      tags:
+        - mood
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MoodRequest'
+      responses:
+        '200':
+          $ref: '#/components/responses/PlaylistResponse'
+        '405':
+          description: invalid input
+        '404':
+          description: not found
+
+components:
+  schemas:
+    MoodRequest:
+      type: object
+      properties:
+        mood_name:
+          type: string
+          example: 'festive'
+    CountryRequest:
+      type: object
+      properties:
+        country_name:
+          type: string
+          example: 'Italy'
+    WeatherRequest:
+      type: object
+      properties:
+        latitude:
+          type: number
+          format: double
+          example: 34.30952
+        longitude:
+          type: number
+          format: double
+          example: 56.58693
+    Playlist:
+      type: object
+      properties:
+        name:
+          type: string
+          example: 'Italy'
+        link:
+          type: string
+          example: 'https://open.spotify.com/playlist/350oMhiKF6hIqQW9vkM9PF'
+    Playlists:
+      type: array
+      items:
+        $ref: '#/components/schemas/Playlist'
+
+  responses:
+    PlaylistResponse:
+      description: OK
+      content:
+        application/json; charset=utf-8:
+          schema:
+            $ref: '#/components/schemas/Playlists'
