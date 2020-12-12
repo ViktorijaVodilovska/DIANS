@@ -1,10 +1,10 @@
-package com.example.demo;
+package com.tunein.tuneinbackend;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DemoApplicationTests {
+class TuneInBackendApplicationTests {
 
     @Test
     void contextLoads() {
