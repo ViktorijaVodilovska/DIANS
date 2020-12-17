@@ -4,7 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class Playlist {
+public class PlaylistModel {
     @Id
     private Integer id;
 
