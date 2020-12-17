@@ -95,7 +95,7 @@ components:
           type: number
           format: double
           example: 56.58693
-    Playlist:
+    PlaylistItem:
       type: object
       properties:
         name:
@@ -107,7 +107,7 @@ components:
     Playlists:
       type: array
       items:
-        $ref: '#/components/schemas/Playlist'
+        $ref: '#/components/schemas/PlaylistItem'
 
   responses:
     PlaylistResponse:
