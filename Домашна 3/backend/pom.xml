@@ -16,9 +16,11 @@
 
     <properties>
         <java.version>11</java.version>
+        <start-class>com.tunein.tuneinbackend.TuneInBackendApplication</start-class>
     </properties>
 
     <dependencies>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
