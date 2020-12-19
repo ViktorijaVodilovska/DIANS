@@ -25,7 +25,6 @@ public class PlaylistController implements CountryApi, MoodApi, WeatherApi {
 
     @Override
     public ResponseEntity<Playlists> getCountryPlaylist(@Valid CountryRequest body) {
-
         return new ResponseEntity<Playlists>(countryService.getPlaylist(body),HttpStatus.OK);
     }
 
