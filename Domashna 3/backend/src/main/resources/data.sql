@@ -1,4 +1,4 @@
-insert into playlist(name, link)
+insert into PLAYLIST(name, link)
  values ('argentina','37i9dQZEVXbMMy2roB9myp'),
         ('australia','37i9dQZEVXbJPcfkRz0wJ0'),
         ('austria','37i9dQZEVXbKNHh6NIXu36'),
