@@ -4,6 +4,7 @@ import com.tunein.tuneinbackend.api.CountryApi;
 import com.tunein.tuneinbackend.api.MoodApi;
 import com.tunein.tuneinbackend.api.WeatherApi;
 import com.tunein.tuneinbackend.models.*;
+import com.tunein.tuneinbackend.services.CountryService;
 import com.tunein.tuneinbackend.services.WeatherService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -19,9 +20,13 @@ public class PlaylistController implements CountryApi, MoodApi, WeatherApi {
     @Autowired
     WeatherService weatherService;
 
+    @Autowired
+    CountryService countryService;
+
     @Override
     public ResponseEntity<Playlists> getCountryPlaylist(@Valid CountryRequest body) {
-        return null;
+
+        return new ResponseEntity<Playlists>(countryService.getPlaylist(body),HttpStatus.OK);
     }
 
     @Override
