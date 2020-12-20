@@ -22,7 +22,6 @@ public class PlaylistController implements CountryApi, MoodApi, WeatherApi {
     WeatherService weatherService;
 
     @Autowired
-    CountryService
     CountryService countryService;
 
     @Autowired
