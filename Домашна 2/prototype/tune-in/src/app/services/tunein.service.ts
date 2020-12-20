@@ -7,6 +7,7 @@ import {
   OutputPlaylistModel,
   WeatherModel,
 } from '../models/tuneIn.model';
+import { PlaylistContainerComponent } from '../components/playlist/playlist-container/playlist-container.component';
 
 @Injectable()
 export class TuneInService {
@@ -15,7 +16,10 @@ export class TuneInService {
   link: string;
   name: string;
 
-  constructor(private http: HttpClient) {}
+  constructor(
+    private http: HttpClient,
+    private playlist: PlaylistContainerComponent
+  ) {}
 
   getPlaylistForCountry(input: CountryModel): Observable<OutputPlaylistModel> {
     return this.http.post<OutputPlaylistModel>(this.apiUrl + 'country', input);
@@ -31,6 +35,7 @@ export class TuneInService {
 
   setLink(link) {
     this.link = link;
+    this.playlist.updatePlaylist(this.link);
   }
 
   getLink() {
