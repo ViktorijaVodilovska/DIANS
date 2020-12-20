@@ -40,13 +40,12 @@
   padding: 0px 20px 5px 20px;
   display: flex;
   flex-direction: column;
-  background-color: white;
+  background-color: rgba(0,0,0,0.7);
   float: right;
-  margin-right: 77px;
-  opacity: 0.8;
+  margin-right: 85px;
 }
 .mood-label {
-  color: rgb(61, 61, 61);
+  color: white;
   font-size: large;
   font-family: commons-medium;
   margin-bottom: 5px;
@@ -61,7 +60,7 @@
   height: 0;
   border-style: solid;
   border-width: 0 11.5px 24px 11.5px;
-  border-color: transparent transparent #ffffff transparent;
+  border-color: transparent transparent black transparent;
   top: -17px;
   left: 50%;
   transform: translateX(-50%);
@@ -70,7 +69,7 @@
 .header2 {
   position: fixed;
   width: 90%;
-  top: 80px;
+  top: 110px;
   z-index: 100;
 }
 

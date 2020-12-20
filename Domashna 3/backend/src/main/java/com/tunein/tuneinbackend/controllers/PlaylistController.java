@@ -2,6 +2,7 @@ package com.tunein.tuneinbackend.controllers;
 
 import com.tunein.tuneinbackend.api.CountryApi;
 import com.tunein.tuneinbackend.api.MoodApi;
+import com.tunein.tuneinbackend.services.MoodService;
 import com.tunein.tuneinbackend.api.WeatherApi;
 import com.tunein.tuneinbackend.models.*;
 import com.tunein.tuneinbackend.services.CountryService;
@@ -21,16 +22,21 @@ public class PlaylistController implements CountryApi, MoodApi, WeatherApi {
     WeatherService weatherService;
 
     @Autowired
+    CountryService
     CountryService countryService;
 
+    @Autowired
+    MoodService moodService;
+    
     @Override
     public ResponseEntity<Playlists> getCountryPlaylist(@Valid CountryRequest body) {
         return new ResponseEntity<Playlists>(countryService.getPlaylist(body),HttpStatus.OK);
     }
 
+    
     @Override
     public ResponseEntity<Playlists> getMoodPlaylist(@Valid MoodRequest body) {
-        return null;
+    	return new ResponseEntity<Playlists>(moodService.getPlaylist(body), HttpStatus.OK);
     }
 
     @Override
