@@ -34,7 +34,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f2a3b42-7640-49d5-a52d-228087435c54" name="Default Changelist" comment="" />
+    <list default="true" id="3f2a3b42-7640-49d5-a52d-228087435c54" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -78,9 +80,6 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RunManager" selected="Spring Boot.TuneInBackendApplication">
@@ -153,7 +152,7 @@
       <workItem from="1608468429713" duration="3936000" />
       <workItem from="1608486500529" duration="3042000" />
       <workItem from="1608501294572" duration="1051000" />
-      <workItem from="1608503051557" duration="1153000" />
+      <workItem from="1608503051557" duration="509000" />
     </task>
     <servers />
   </component>
@@ -218,9 +217,9 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state width="1664" height="153" key="GridCell.Tab.1.right/0.0.1707.920@0.0.1707.920" timestamp="1608502686054" />
-    <state x="671" y="71" key="SettingsEditor" timestamp="1608503616547">
+    <state x="728" y="106" key="SettingsEditor" timestamp="1608503096524">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="671" y="71" key="SettingsEditor/0.0.1707.920@0.0.1707.920" timestamp="1608503616547" />
+    <state x="728" y="106" key="SettingsEditor/0.0.1707.920@0.0.1707.920" timestamp="1608503096524" />
   </component>
 </project>
