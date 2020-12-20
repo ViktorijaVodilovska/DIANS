@@ -11,6 +11,10 @@ import {
 @Injectable()
 export class TuneInService {
   private apiUrl = 'http://localhost:8080/';
+
+  link: string;
+  name: string;
+
   constructor(private http: HttpClient) {}
 
   getPlaylistForCountry(input: CountryModel): Observable<OutputPlaylistModel> {
@@ -23,5 +27,13 @@ export class TuneInService {
 
   getPlaylistForWeather(input: WeatherModel): Observable<OutputPlaylistModel> {
     return this.http.post<OutputPlaylistModel>(this.apiUrl + 'weather', input);
+  }
+
+  setLink(link) {
+    this.link = link;
+  }
+
+  getLink() {
+    return this.link;
   }
 }

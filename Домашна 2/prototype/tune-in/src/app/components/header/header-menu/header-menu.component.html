@@ -24,12 +24,12 @@
 <div class="header2" *ngIf="show">
   <div class="mood-popup">
     <div class="triangle"></div>
-    <a class="mood-label">feel good</a>
-    <a class="mood-label">festive</a>
-    <a class="mood-label">happy</a>
-    <a class="mood-label">moody</a>
-    <a class="mood-label">productive</a>
-    <a class="mood-label">relaxed</a>
-    <a class="mood-label">sad</a>
+    <a class="mood-label" (click)="getPlaylist('feel good')">feel good</a>
+    <a class="mood-label" (click)="getPlaylist('festive')">festive</a>
+    <a class="mood-label" (click)="getPlaylist('happy')">happy</a>
+    <a class="mood-label" (click)="getPlaylist('moody')">moody</a>
+    <a class="mood-label" (click)="getPlaylist('productive')">productive</a>
+    <a class="mood-label" (click)="getPlaylist('relaxed')">relaxed</a>
+    <a class="mood-label" (click)="getPlaylist('sad')">sad</a>
   </div>
 </div>

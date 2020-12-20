@@ -1,12 +1,25 @@
 <div class="playlist-container">
-  <button class="playlist-button" type="button" (click)="showPlaylist = !showPlaylist"><label>Playlist</label></button>
-<!--  <div class="playlist" *ngIf="showPlaylist">-->
-<!--    <div class="song-entry"  *ngFor="let song of songs">-->
-<!--      <span class="title">{{song.title}}</span>-->
-<!--      <span class="artist">{{song.artist}}</span>-->
-<!--    </div>-->
-<!--  </div>-->
-  <iframe *ngIf="showPlaylist" class="spotify" src="https://open.spotify.com/embed/playlist/37i9dQZEVXbLRQDuF5jeBp" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+  <button
+    class="playlist-button"
+    type="button"
+    (click)="showPlaylist = !showPlaylist; updatePlaylist()"
+  >
+    <label>Playlist</label>
+  </button>
+  <!--  <div class="playlist" *ngIf="showPlaylist">-->
+  <!--    <div class="song-entry"  *ngFor="let song of songs">-->
+  <!--      <span class="title">{{song.title}}</span>-->
+  <!--      <span class="artist">{{song.artist}}</span>-->
+  <!--    </div>-->`
+  <!--  </div>-->
+  <iframe
+    *ngIf="showPlaylist"
+    id="frame"
+    class="spotify"
+    width="300"
+    height="380"
+    frameborder="0"
+    allowtransparency="true"
+    allow="encrypted-media"
+  ></iframe>
 </div>
-
-

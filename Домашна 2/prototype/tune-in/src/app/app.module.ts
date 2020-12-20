@@ -8,11 +8,7 @@ import { HeaderMenuComponent } from './components/header/header-menu/header-menu
 import { PlaylistContainerComponent } from './components/playlist/playlist-container/playlist-container.component';
 import { AboutUsComponent } from './components/about/about-us/about-us.component';
 import { TuneInService } from './services/tunein.service';
-import {
-  HttpClient,
-  HttpClientModule,
-  HttpHandler,
-} from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,7 +19,7 @@ import {
     AboutUsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
-  providers: [TuneInService, HttpClient],
+  providers: [TuneInService, HttpClient, HeaderMenuComponent],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

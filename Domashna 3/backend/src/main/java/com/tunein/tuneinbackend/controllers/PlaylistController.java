@@ -29,20 +29,17 @@ public class PlaylistController implements CountryApi, MoodApi, WeatherApi {
 
     @Autowired
     MoodService moodService;
-
-    @GetMapping("/")
+    
     @Override
     public ResponseEntity<Playlists> getCountryPlaylist(@Valid CountryRequest body) {
         return new ResponseEntity<Playlists>(countryService.getPlaylist(body),HttpStatus.OK);
     }
 
-    @GetMapping("/")
     @Override
     public ResponseEntity<Playlists> getMoodPlaylist(@Valid MoodRequest body) {
     	return new ResponseEntity<Playlists>(moodService.getPlaylist(body), HttpStatus.OK);
     }
 
-    @GetMapping("/")
     @Override
     public ResponseEntity<Playlists> getWeatherPlaylist(@Valid WeatherRequest body) {
 
