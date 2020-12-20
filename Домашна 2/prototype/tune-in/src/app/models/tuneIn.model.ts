@@ -19,3 +19,12 @@ export interface PlaylistModel {
 export interface OutputPlaylistModel {
   Playlists: PlaylistModel[];
 }
+
+export interface MapModel {
+  adminCode1: string;
+  adminName1: string;
+  codes: any;
+  countryCode: string;
+  countryName: string;
+  distance: number;
+}

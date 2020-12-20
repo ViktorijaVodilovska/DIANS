@@ -40,7 +40,7 @@
   padding: 0px 20px 5px 20px;
   display: flex;
   flex-direction: column;
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0, 0, 0, 0.7);
   float: right;
   margin-right: 85px;
 }
@@ -94,7 +94,6 @@
   border-radius: 6px;
   float: right;
   position: absolute;
-  z-index: 1;
 }
 
 #about_tooltip {

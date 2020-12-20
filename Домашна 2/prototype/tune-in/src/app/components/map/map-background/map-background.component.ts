@@ -4,8 +4,9 @@ import { from } from 'rxjs';
 import * as L from 'leaflet';
 import { mapToMapExpression } from '@angular/compiler/src/render3/util';
 import { TuneInService } from 'src/app/services/tunein.service';
-import { CountryModel } from 'src/app/models/tuneIn.model';
-import {DomSanitizer} from '@angular/platform-browser';
+import { CountryModel, MapModel } from 'src/app/models/tuneIn.model';
+import { DomSanitizer } from '@angular/platform-browser';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-map-background',
@@ -13,21 +14,27 @@ import {DomSanitizer} from '@angular/platform-browser';
   styleUrls: ['./map-background.component.scss'],
 })
 export class MapBackgroundComponent implements AfterViewInit {
-  constructor(private tuneInService: TuneInService, private dom: DomSanitizer) {}
+  constructor(
+    private tuneInService: TuneInService,
+    private dom: DomSanitizer,
+    private http: HttpClient
+  ) {}
 
   // code for playlist
-  link = "https://open.spotify.com/embed/playlist/37i9dQZEVXbMDoHDwVN2tF"
+  link = 'https://open.spotify.com/embed/playlist/37i9dQZEVXbMDoHDwVN2tF';
   safeLink = this.dom.bypassSecurityTrustResourceUrl(this.link);
-  showPlaylist:boolean = false;
+  showPlaylist: boolean = false;
+  country: string;
 
-  linkChanged(newLink){
-    this.link = "https://open.spotify.com/embed/playlist/" + newLink;
+  mapModel: any;
+  linkChanged(newLink) {
+    this.link = 'https://open.spotify.com/embed/playlist/' + newLink;
     this.safeLink = this.dom.bypassSecurityTrustResourceUrl(this.link);
     this.showPlaylist = true;
   }
 
-  showPlaylistChanged(newShow){
-    this.showPlaylist = newShow
+  showPlaylistChanged(newShow) {
+    this.showPlaylist = newShow;
   }
 
   // code for map
@@ -85,7 +92,6 @@ export class MapBackgroundComponent implements AfterViewInit {
     tiles.addTo(this.map);
 
     this.map.on('click', (e) => {
-      console.log(e.latlng);
       if (marker) {
         // check
         this.map.removeLayer(marker);
@@ -93,6 +99,23 @@ export class MapBackgroundComponent implements AfterViewInit {
       marker = L.marker([e.latlng.lat, e.latlng.lng], this.myMarker).addTo(
         this.map
       );
+
+      this.http
+        .get(
+          'http://api.geonames.org/countrySubdivisionJSON?lat=' +
+            e.latlng.lat.toFixed(4) +
+            '&lng=' +
+            e.latlng.lng.toFixed(4) +
+            '&username=MatejDodevski'
+        )
+        .subscribe((res) => {
+          let arr = [];
+          Object.keys(res).map(function (key) {
+            arr.push({ [key]: res[key] });
+            return arr;
+          });
+          this.country = arr[4].countryName;
+        });
     });
   }
 }

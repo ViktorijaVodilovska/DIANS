@@ -1,6 +1,6 @@
 <div class="header">
   <div class="logo-containter"><label class="logo">Tune In</label></div>
-  <a class="weather icon" (click) = "getLocation()">
+  <a class="weather icon" (click)="getLocation()">
     <span id="weather_tooltip" class="tooltiptext"
       >Play a song according to your local weather</span
     >
@@ -10,7 +10,7 @@
     <span id="mood_tooltip" class="tooltiptext"
       >Play a song according to your mood</span
     >
-    <img class="icon_img" src="../../../../assets/Icons/happy.png" />
+    <img class="icon_img" id="img_mood" [src]="path" />
   </a>
   <a routerLink="about" class="about icon">
     <span id="about_tooltip" class="tooltiptext">About</span>
