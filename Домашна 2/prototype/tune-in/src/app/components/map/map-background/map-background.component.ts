@@ -3,13 +3,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { from } from 'rxjs';
 import * as L from 'leaflet';
 import { mapToMapExpression } from '@angular/compiler/src/render3/util';
+import { TuneInService } from 'src/app/services/tunein.service';
+import { CountryModel } from 'src/app/models/tuneIn.model';
 
 @Component({
   selector: 'app-map-background',
   templateUrl: './map-background.component.html',
   styleUrls: ['./map-background.component.scss'],
 })
-
 export class MapBackgroundComponent implements AfterViewInit {
   private map;
   private myMarker = {
@@ -18,15 +19,20 @@ export class MapBackgroundComponent implements AfterViewInit {
       iconAnchor: [10, 41],
       popupAnchor: [2, -40],
       // specify the path here
-      iconUrl: "https://unpkg.com/leaflet@1.5.1/dist/images/marker-icon.png",
-      shadowUrl: "https://unpkg.com/leaflet@1.5.1/dist/images/marker-shadow.png",
-    })
+      iconUrl: 'https://unpkg.com/leaflet@1.5.1/dist/images/marker-icon.png',
+      shadowUrl:
+        'https://unpkg.com/leaflet@1.5.1/dist/images/marker-shadow.png',
+    }),
   };
-
-  constructor() {}
+  input = {} as CountryModel;
+  constructor(private tuneInService: TuneInService) {}
 
   ngAfterViewInit(): void {
     this.initMap();
+    this.input.country_name = 'Italy';
+    this.tuneInService.getPlaylistForCountry(this.input).subscribe((res) => {
+      console.log(res);
+    });
   }
 
   //create map function
@@ -60,12 +66,15 @@ export class MapBackgroundComponent implements AfterViewInit {
 
     tiles.addTo(this.map);
 
-    this.map.on("click", e => {
+    this.map.on('click', (e) => {
       console.log(e.latlng);
-      if (marker) { // check
+      if (marker) {
+        // check
         this.map.removeLayer(marker);
       }
-      marker = L.marker([e.latlng.lat, e.latlng.lng], this.myMarker).addTo(this.map);
+      marker = L.marker([e.latlng.lat, e.latlng.lng], this.myMarker).addTo(
+        this.map
+      );
     });
   }
 }

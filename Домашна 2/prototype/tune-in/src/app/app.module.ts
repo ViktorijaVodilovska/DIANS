@@ -7,6 +7,12 @@ import { MapBackgroundComponent } from './components/map/map-background/map-back
 import { HeaderMenuComponent } from './components/header/header-menu/header-menu.component';
 import { PlaylistContainerComponent } from './components/playlist/playlist-container/playlist-container.component';
 import { AboutUsComponent } from './components/about/about-us/about-us.component';
+import { TuneInService } from './services/tunein.service';
+import {
+  HttpClient,
+  HttpClientModule,
+  HttpHandler,
+} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,8 +22,8 @@ import { AboutUsComponent } from './components/about/about-us/about-us.component
     PlaylistContainerComponent,
     AboutUsComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
-  providers: [],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  providers: [TuneInService, HttpClient],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
