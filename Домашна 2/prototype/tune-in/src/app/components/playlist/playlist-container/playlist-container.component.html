@@ -2,7 +2,7 @@
   <button
     class="playlist-button"
     type="button"
-    (click)="showPlaylist = !showPlaylist; updatePlaylist()"
+    (click)="showPlaylist = !showPlaylist"
   >
     <label>Playlist</label>
   </button>
@@ -15,7 +15,7 @@
   <iframe
     *ngIf="showPlaylist"
     id="frame"
-    [src]="url"
+    src="{{ url }}"
     class="spotify"
     width="300"
     height="380"

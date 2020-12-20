@@ -19,7 +19,12 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     AboutUsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
-  providers: [TuneInService, HttpClient, HeaderMenuComponent],
+  providers: [
+    TuneInService,
+    HttpClient,
+    HeaderMenuComponent,
+    PlaylistContainerComponent,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

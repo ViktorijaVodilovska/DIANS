@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MoodModel } from 'src/app/models/tuneIn.model';
 import { TuneInService } from 'src/app/services/tunein.service';
+import { Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-header-menu',
