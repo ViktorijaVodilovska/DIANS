@@ -115,6 +115,11 @@ export class MapBackgroundComponent implements AfterViewInit {
             return arr;
           });
           this.country = arr[4].countryName;
+          let model = {} as CountryModel;
+          model.country_name = this.country;
+          this.tuneInService.getPlaylistForCountry(model).subscribe((res) => {
+            this.linkChanged(res[0].link);
+          });
         });
     });
   }
