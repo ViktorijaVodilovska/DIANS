@@ -2,20 +2,14 @@
   <button
     class="playlist-button"
     type="button"
-    (click)="showPlaylist = !showPlaylist"
+    (click)="showPlaylistChange()"
   >
     <label>Playlist</label>
   </button>
-  <!--  <div class="playlist" *ngIf="showPlaylist">-->
-  <!--    <div class="song-entry"  *ngFor="let song of songs">-->
-  <!--      <span class="title">{{song.title}}</span>-->
-  <!--      <span class="artist">{{song.artist}}</span>-->
-  <!--    </div>-->`
-  <!--  </div>-->
   <iframe
     *ngIf="showPlaylist"
     id="frame"
-    src="{{ url }}"
+    [src]="link"
     class="spotify"
     width="300"
     height="380"

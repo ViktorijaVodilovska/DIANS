@@ -1,11 +1,5 @@
-import { Component, Input, OnInit, SecurityContext } from '@angular/core';
-import { HeaderMenuComponent } from '../../header/header-menu/header-menu.component';
-import {
-  DomSanitizer,
-  SafeResourceUrl,
-  SafeUrl,
-} from '@angular/platform-browser';
-import { TuneInService } from 'src/app/services/tunein.service';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+
 
 @Component({
   selector: 'app-playlist-container',
@@ -13,16 +7,15 @@ import { TuneInService } from 'src/app/services/tunein.service';
   styleUrls: ['./playlist-container.component.scss'],
 })
 export class PlaylistContainerComponent implements OnInit {
-  showPlaylist = false;
-  url: SafeResourceUrl;
+  @Output() toggleShowPlaylist = new EventEmitter();
+  @Input() link:string
+  @Input() showPlaylist:boolean;
 
-  constructor(private dom: DomSanitizer) {}
+  constructor() {}
 
   ngOnInit(): void {}
 
-  updatePlaylist(link) {
-    console.log(link);
-    var NotCleanUrl = 'https://open.spotify.com/embed/playlist/' + link;
-    this.url = this.dom.bypassSecurityTrustResourceUrl(NotCleanUrl);
+  showPlaylistChange(){
+    this.toggleShowPlaylist.emit(!this.showPlaylist)
   }
 }

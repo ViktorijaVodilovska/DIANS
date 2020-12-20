@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MoodModel } from 'src/app/models/tuneIn.model';
 import { TuneInService } from 'src/app/services/tunein.service';
@@ -10,6 +10,7 @@ import { Output, EventEmitter } from '@angular/core';
   styleUrls: ['./header-menu.component.css'],
 })
 export class HeaderMenuComponent implements OnInit {
+  @Output() linkChange = new EventEmitter();
   show = false;
 
   input = {} as MoodModel;
@@ -22,8 +23,12 @@ export class HeaderMenuComponent implements OnInit {
 
     this.tuneInService.getPlaylistForMood(this.input).subscribe((res) => {
       this.link = res[0].link;
-      this.tuneInService.setLink(this.link);
+      this.linkChanged();
     });
+  }
+
+  linkChanged(){
+    this.linkChange.emit(this.link)
   }
 
   ngOnInit(): void {}

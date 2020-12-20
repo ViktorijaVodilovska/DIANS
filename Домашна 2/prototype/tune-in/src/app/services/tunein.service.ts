@@ -32,13 +32,4 @@ export class TuneInService {
   getPlaylistForWeather(input: WeatherModel): Observable<OutputPlaylistModel> {
     return this.http.post<OutputPlaylistModel>(this.apiUrl + 'weather', input);
   }
-
-  setLink(link) {
-    this.link = link;
-    this.playlist.updatePlaylist(this.link);
-  }
-
-  getLink() {
-    return this.link;
-  }
 }

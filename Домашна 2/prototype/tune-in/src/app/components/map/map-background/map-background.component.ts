@@ -5,6 +5,7 @@ import * as L from 'leaflet';
 import { mapToMapExpression } from '@angular/compiler/src/render3/util';
 import { TuneInService } from 'src/app/services/tunein.service';
 import { CountryModel } from 'src/app/models/tuneIn.model';
+import {DomSanitizer} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-map-background',
@@ -12,6 +13,24 @@ import { CountryModel } from 'src/app/models/tuneIn.model';
   styleUrls: ['./map-background.component.scss'],
 })
 export class MapBackgroundComponent implements AfterViewInit {
+  constructor(private tuneInService: TuneInService, private dom: DomSanitizer) {}
+
+  // code for playlist
+  link = "https://open.spotify.com/embed/playlist/37i9dQZEVXbMDoHDwVN2tF"
+  safeLink = this.dom.bypassSecurityTrustResourceUrl(this.link);
+  showPlaylist:boolean = false;
+
+  linkChanged(newLink){
+    this.link = "https://open.spotify.com/embed/playlist/" + newLink;
+    this.safeLink = this.dom.bypassSecurityTrustResourceUrl(this.link);
+    this.showPlaylist = true;
+  }
+
+  showPlaylistChanged(newShow){
+    this.showPlaylist = newShow
+  }
+
+  // code for map
   private map;
   private myMarker = {
     icon: L.icon({
@@ -25,7 +44,6 @@ export class MapBackgroundComponent implements AfterViewInit {
     }),
   };
   input = {} as CountryModel;
-  constructor(private tuneInService: TuneInService) {}
 
   ngAfterViewInit(): void {
     this.initMap();
