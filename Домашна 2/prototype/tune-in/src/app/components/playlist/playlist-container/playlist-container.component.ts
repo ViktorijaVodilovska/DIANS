@@ -1,6 +1,6 @@
 import { Component, OnInit, SecurityContext } from '@angular/core';
 import { HeaderMenuComponent } from '../../header/header-menu/header-menu.component';
-import { DomSanitizer } from '@angular/platform-browser';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { TuneInService } from 'src/app/services/tunein.service';
 
 @Component({
@@ -10,7 +10,7 @@ import { TuneInService } from 'src/app/services/tunein.service';
 })
 export class PlaylistContainerComponent implements OnInit {
   showPlaylist = false;
-  url: string;
+  url: SafeResourceUrl;
   constructor(
     private header: HeaderMenuComponent,
     private dom: DomSanitizer,
@@ -21,8 +21,7 @@ export class PlaylistContainerComponent implements OnInit {
 
   updatePlaylist() {
     var NotCleanUrl =
-      'https://open.spotify.com/embed/playlist/' + this.tuneInService.getLink();
-    console.log(NotCleanUrl);
-    (document.getElementById('frame') as HTMLIFrameElement).src = NotCleanUrl;
+      'http://open.spotify.com/embed/playlist/' + this.tuneInService.getLink();
+    this.url = this.dom.bypassSecurityTrustResourceUrl(NotCleanUrl);
   }
 }
