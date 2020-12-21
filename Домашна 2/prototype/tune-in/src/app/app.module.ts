@@ -9,6 +9,9 @@ import { PlaylistContainerComponent } from './components/playlist/playlist-conta
 import { AboutUsComponent } from './components/about/about-us/about-us.component';
 import { TuneInService } from './services/tunein.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { Overlay } from '@angular/cdk/overlay';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -18,12 +21,19 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     PlaylistContainerComponent,
     AboutUsComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+  ],
   providers: [
     TuneInService,
     HttpClient,
     HeaderMenuComponent,
     PlaylistContainerComponent,
+    MatSnackBar,
+    Overlay,
   ],
   bootstrap: [AppComponent],
 })

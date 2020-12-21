@@ -3,6 +3,12 @@ import { Router } from '@angular/router';
 import { MoodModel, WeatherModel } from 'src/app/models/tuneIn.model';
 import { TuneInService } from 'src/app/services/tunein.service';
 import { Output, EventEmitter } from '@angular/core';
+import {
+  MatSnackBar,
+  MatSnackBarHorizontalPosition,
+  MatSnackBarModule,
+  MatSnackBarVerticalPosition,
+} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-header-menu',
@@ -17,7 +23,11 @@ export class HeaderMenuComponent implements OnInit {
 
   link: string;
   path: string;
-  constructor(private router: Router, private tuneInService: TuneInService) {
+  constructor(
+    private router: Router,
+    private tuneInService: TuneInService,
+    private snackBar: MatSnackBar
+  ) {
     this.getLocation = this.getLocation.bind(this);
     this.getWeatherPlaylist = this.getWeatherPlaylist.bind(this);
   }
@@ -61,16 +71,26 @@ export class HeaderMenuComponent implements OnInit {
   }
 
   getWeatherPlaylist(position) {
-    console.log('lat ' + position.coords.latitude);
-    console.log('lon ' + position.coords.longitude);
     this.weatherModel.latitude = position.coords.latitude;
     this.weatherModel.longitude = position.coords.longitude;
 
     this.tuneInService
       .getPlaylistForWeather(this.weatherModel)
       .subscribe((res) => {
-        var rand = Math.floor(Math.random() * 3);
-        this.linkChanged(res[rand]);
+        if (res) {
+          var rand = Math.floor(Math.random() * 3);
+          this.linkChanged(res[rand]);
+        } else {
+          this.snackBar.open(
+            'Sorry, we could not find your local weather forecast.',
+            'Close',
+            {
+              duration: 10000,
+              horizontalPosition: 'right',
+              verticalPosition: 'bottom',
+            }
+          );
+        }
       });
   }
 

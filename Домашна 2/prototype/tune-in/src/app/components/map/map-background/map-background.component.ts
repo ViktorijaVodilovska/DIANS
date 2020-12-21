@@ -7,6 +7,13 @@ import { TuneInService } from 'src/app/services/tunein.service';
 import { CountryModel, MapModel } from 'src/app/models/tuneIn.model';
 import { DomSanitizer } from '@angular/platform-browser';
 import { HttpClient } from '@angular/common/http';
+import { element } from 'protractor';
+import {
+  MatSnackBar,
+  MatSnackBarHorizontalPosition,
+  MatSnackBarModule,
+  MatSnackBarVerticalPosition,
+} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-map-background',
@@ -17,7 +24,8 @@ export class MapBackgroundComponent implements AfterViewInit {
   constructor(
     private tuneInService: TuneInService,
     private dom: DomSanitizer,
-    private http: HttpClient
+    private http: HttpClient,
+    private snackBar: MatSnackBar
   ) {}
 
   // code for playlist
@@ -26,7 +34,6 @@ export class MapBackgroundComponent implements AfterViewInit {
   showPlaylist: boolean = false;
   country: string;
 
-  mapModel: any;
   linkChanged(newLink) {
     this.link = 'https://open.spotify.com/embed/playlist/' + newLink;
     this.safeLink = this.dom.bypassSecurityTrustResourceUrl(this.link);
@@ -55,9 +62,7 @@ export class MapBackgroundComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     this.initMap();
     this.input.country_name = 'Italy';
-    this.tuneInService.getPlaylistForCountry(this.input).subscribe((res) => {
-      console.log(res);
-    });
+    this.tuneInService.getPlaylistForCountry(this.input).subscribe((res) => {});
   }
 
   //create map function
@@ -102,24 +107,47 @@ export class MapBackgroundComponent implements AfterViewInit {
 
       this.http
         .get(
-          'https://api.geonames.org/countrySubdivisionJSON?lat=' +
+          'https://api.opencagedata.com/geocode/v1/json?q=' +
             e.latlng.lat.toFixed(4) +
-            '&lng=' +
+            '%2C' +
             e.latlng.lng.toFixed(4) +
-            '&username=MatejDodevski'
+            '&key=2fa8364933cc4f829a1ddc387deec0c8&pretty=1'
         )
         .subscribe((res) => {
-          let arr = [];
+          console.log(res);
+          let temp = [];
           Object.keys(res).map(function (key) {
-            arr.push({ [key]: res[key] });
-            return arr;
+            temp.push({ [key]: res[key] });
           });
-          this.country = arr[4].countryName;
+          this.country = temp[3]['results'][0]['components']['country'];
           let model = {} as CountryModel;
           model.country_name = this.country;
-          this.tuneInService.getPlaylistForCountry(model).subscribe((res) => {
-            this.linkChanged(res[0].link);
-          });
+
+          if (this.country) {
+            this.tuneInService.getPlaylistForCountry(model).subscribe((res) => {
+              if (res[0]) {
+                this.linkChanged(res[0].link);
+              } else {
+                this.snackBar.open(
+                  'Sorry, Spotify does not have any information about ' +
+                    this.country +
+                    '.',
+                  'Close',
+                  {
+                    duration: 10000,
+                    horizontalPosition: 'right',
+                    verticalPosition: 'bottom',
+                  }
+                );
+              }
+            });
+          } else {
+            this.snackBar.open("Come on... don't click on water...", 'Close', {
+              duration: 10000,
+              horizontalPosition: 'right',
+              verticalPosition: 'bottom',
+            });
+          }
         });
     });
   }
