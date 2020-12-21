@@ -102,7 +102,7 @@ export class MapBackgroundComponent implements AfterViewInit {
 
       this.http
         .get(
-          'http://api.geonames.org/countrySubdivisionJSON?lat=' +
+          'https://api.geonames.org/countrySubdivisionJSON?lat=' +
             e.latlng.lat.toFixed(4) +
             '&lng=' +
             e.latlng.lng.toFixed(4) +

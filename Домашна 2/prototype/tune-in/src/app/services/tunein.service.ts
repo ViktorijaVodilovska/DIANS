@@ -11,7 +11,7 @@ import { PlaylistContainerComponent } from '../components/playlist/playlist-cont
 
 @Injectable()
 export class TuneInService {
-  private apiUrl = 'http://localhost:8080/';
+  private apiUrl = 'https://heroku-tunein.herokuapp.com/';
 
   link: string;
   name: string;

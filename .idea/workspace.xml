@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:181024" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:181088" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3f2a3b42-7640-49d5-a52d-228087435c54" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/../.." value="MoodService" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:\Users\vikto\.m2\wrapper\dists\apache-maven-3.6.3-bin\1iopthnavndlasol9gbrbg6bf2\apache-maven-3.6.3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1lntK2z1cJxykjVoukQd5RKxH9G" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Domashna 3/backend" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RunManager" selected="Spring Boot.TuneInBackendApplication">
+    <configuration name="WeatherService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.tunein.tuneinbackend.services.WeatherService" />
+      <module name="backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tunein.tuneinbackend.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WeatherTest.getPlaylistTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tunein.tuneinbackend.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.tunein.tuneinbackend" />
+      <option name="MAIN_CLASS_NAME" value="com.tunein.tuneinbackend.WeatherTest" />
+      <option name="METHOD_NAME" value="getPlaylistTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TuneInBackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="backend" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.tunein.tuneinbackend.TuneInBackendApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.WeatherTest.getPlaylistTest" />
+        <item itemvalue="Application.WeatherService" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3f2a3b42-7640-49d5-a52d-228087435c54" name="Default Changelist" comment="" />
+      <created>1608244617563</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1608244617563</updated>
+      <workItem from="1608244618777" duration="2932000" />
+      <workItem from="1608389337300" duration="7147000" />
+      <workItem from="1608404165851" duration="9449000" />
+      <workItem from="1608466731594" duration="771000" />
+      <workItem from="1608468429713" duration="3936000" />
+      <workItem from="1608486500529" duration="3042000" />
+      <workItem from="1608501294572" duration="1051000" />
+      <workItem from="1608503051557" duration="2511000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/../.." />
+    </ignored-roots>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="707" y="352" key="#Assign_Data_Sources" timestamp="1608247236147">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="707" y="352" key="#Assign_Data_Sources/0.0.1707.920@0.0.1707.920" timestamp="1608247236147" />
+    <state x="635" y="216" key="FileChooserDialogImpl" timestamp="1608506533741">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="635" y="216" key="FileChooserDialogImpl/0.0.1707.920@0.0.1707.920" timestamp="1608506533741" />
+    <state width="808" height="220" key="GridCell.Tab.0.bottom" timestamp="1608506537803">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="808" height="220" key="GridCell.Tab.0.bottom/0.0.1707.920@0.0.1707.920" timestamp="1608506537803" />
+    <state width="808" height="220" key="GridCell.Tab.0.center" timestamp="1608506537803">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="808" height="220" key="GridCell.Tab.0.center/0.0.1707.920@0.0.1707.920" timestamp="1608506537803" />
+    <state width="808" height="220" key="GridCell.Tab.0.left" timestamp="1608506537802">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="808" height="220" key="GridCell.Tab.0.left/0.0.1707.920@0.0.1707.920" timestamp="1608506537802" />
+    <state width="808" height="220" key="GridCell.Tab.0.right" timestamp="1608506537803">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="808" height="220" key="GridCell.Tab.0.right/0.0.1707.920@0.0.1707.920" timestamp="1608506537803" />
+    <state width="808" height="220" key="GridCell.Tab.1.bottom" timestamp="1608506537804">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="808" height="220" key="GridCell.Tab.1.bottom/0.0.1707.920@0.0.1707.920" timestamp="1608506537804" />
+    <state width="808" height="220" key="GridCell.Tab.1.center" timestamp="1608506537803">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="808" height="220" key="GridCell.Tab.1.center/0.0.1707.920@0.0.1707.920" timestamp="1608506537803" />
+    <state width="808" height="220" key="GridCell.Tab.1.left" timestamp="1608506537803">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="808" height="220" key="GridCell.Tab.1.left/0.0.1707.920@0.0.1707.920" timestamp="1608506537803" />
+    <state width="808" height="220" key="GridCell.Tab.1.right" timestamp="1608506537803">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="808" height="220" key="GridCell.Tab.1.right/0.0.1707.920@0.0.1707.920" timestamp="1608506537803" />
+    <state x="671" y="71" key="SettingsEditor" timestamp="1608504966553">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="671" y="71" key="SettingsEditor/0.0.1707.920@0.0.1707.920" timestamp="1608504966553" />
+  </component>
+</project>
