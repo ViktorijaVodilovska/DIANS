@@ -43,6 +43,10 @@
   background-color: rgba(0, 0, 0, 0.7);
   float: right;
   margin-right: 85px;
+  position: fixed;
+  z-index:100;
+  right: 10%;
+  top: 110px;
 }
 .mood-label {
   color: white;
@@ -65,12 +69,6 @@
   left: 50%;
   transform: translateX(-50%);
   position: relative;
-}
-.header2 {
-  position: fixed;
-  width: 90%;
-  top: 110px;
-  z-index: 100;
 }
 
 .class-green {

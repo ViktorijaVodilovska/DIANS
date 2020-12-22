@@ -36,7 +36,7 @@ insert into PLAYLIST(name, link)
         ('luxembourg','37i9dQZEVXbKGcyg6TFGx6'),
         ('malaysia','37i9dQZEVXbJlfUljuZExa'),
         ('mexico','37i9dQZEVXbO3qyFxbkOE1'),
-        ('netherlands','37i9dQZEVXbKCF6dqVpDkS'),
+        ('the netherlands','37i9dQZEVXbKCF6dqVpDkS'),
         ('new zealand','37i9dQZEVXbM8SIrkERIYl'),
         ('nicaragua','37i9dQZEVXbISk8kxnzfCq'),
         ('norway','37i9dQZEVXbJvfa0Yxg7E7'),
@@ -59,7 +59,7 @@ insert into PLAYLIST(name, link)
         ('turkey','37i9dQZEVXbIVYVBNw9D5K'),
         ('ukraine','37i9dQZEVXbKkidEfWYRuD'),
         ('united kingdom','37i9dQZEVXbLnolsZ8PSNw'),
-        ('united states','37i9dQZEVXbLRQDuF5jeBp'),
+        ('united states of america','37i9dQZEVXbLRQDuF5jeBp'),
         ('uruguay','37i9dQZEVXbMJJi3wgRbAy'),
         ('vietnam','37i9dQZEVXbLdGSmz6xilI');
 

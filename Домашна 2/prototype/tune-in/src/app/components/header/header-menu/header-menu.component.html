@@ -1,12 +1,12 @@
 <div class="header">
   <div class="logo-containter"><label class="logo">Tune In</label></div>
-  <a class="weather icon" (click)="getLocation()">
+  <a routerLink="" class="weather icon" (click)="getLocation()">
     <span id="weather_tooltip" class="tooltiptext"
       >Play a song according to your local weather</span
     >
     <img class="icon_img" src="../../../../assets/Icons/few clouds.png" />
   </a>
-  <a class="mood icon" (click)="show = !show">
+  <a routerLink="" class="mood icon" (click)="show = !show">
     <span id="mood_tooltip" class="tooltiptext"
       >Play a song according to your mood</span
     >
@@ -21,15 +21,13 @@
     <img class="icon_img" src="../../../../assets/Icons/home.png" />
   </a>
 </div>
-<div class="header2" *ngIf="show">
-  <div class="mood-popup">
-    <div class="triangle"></div>
-    <a class="mood-label" (click)="getPlaylist('feel good')">feel good</a>
-    <a class="mood-label" (click)="getPlaylist('festive')">festive</a>
-    <a class="mood-label" (click)="getPlaylist('happy')">happy</a>
-    <a class="mood-label" (click)="getPlaylist('moody')">moody</a>
-    <a class="mood-label" (click)="getPlaylist('productive')">productive</a>
-    <a class="mood-label" (click)="getPlaylist('relaxed')">relaxed</a>
-    <a class="mood-label" (click)="getPlaylist('sad')">sad</a>
-  </div>
+<div class="mood-popup" *ngIf="show">
+  <div class="triangle"></div>
+  <a class="mood-label" (click)="getPlaylist('feel good')">feel good</a>
+  <a class="mood-label" (click)="getPlaylist('festive')">festive</a>
+  <a class="mood-label" (click)="getPlaylist('happy')">happy</a>
+  <a class="mood-label" (click)="getPlaylist('moody')">moody</a>
+  <a class="mood-label" (click)="getPlaylist('productive')">productive</a>
+  <a class="mood-label" (click)="getPlaylist('relaxed')">relaxed</a>
+  <a class="mood-label" (click)="getPlaylist('sad')">sad</a>
 </div>
