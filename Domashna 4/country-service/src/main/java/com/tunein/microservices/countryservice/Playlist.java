@@ -2,6 +2,9 @@ package com.tunein.microservices.countryservice;
 
 import javax.persistence.*;
 
+/**
+ * Represents a playlist identified by an ID number, a country name and URL
+ */
 @Entity
 public class Playlist {
     @Id

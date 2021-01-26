@@ -11,12 +11,21 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.List;
 
+/**
+ * Represents a service for playlists based on the current weather
+ */
 @Service
 public class WeatherService {
 
     @Autowired
     PlaylistRepository repository;
 
+    /**
+     * This method returns a list of playlists
+     * @param body a JSON object containing the current weather
+     * @return a list of playlists
+     * @throws IOException
+     */
     public List<Playlist>  getPlaylist(JSONObject body) throws IOException {
 
         URL url = new URL(String.format("https://api.openweathermap.org/data/2.5/weather?lat=%s&lon=%s&appid=0650b368a01667cfe34732c5249d15dd",

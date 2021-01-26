@@ -5,6 +5,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+/**
+ * Represents a playlist identified by an ID number, weather and URL
+ */
 @Entity
 public class Playlist {
     @Id

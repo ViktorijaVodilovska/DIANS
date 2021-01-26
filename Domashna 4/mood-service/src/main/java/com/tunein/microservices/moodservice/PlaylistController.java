@@ -6,6 +6,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+/**
+ * A controller for getting a playlist request
+ */
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 public class PlaylistController{
