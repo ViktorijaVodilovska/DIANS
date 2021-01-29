@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  eureka-service:
+    image: eureka-server
+    ports:
+      - 3000:3000
+  gateway-service:
+    image: gateway-service
+    ports:
+      - 80:80
+  mood-service:
+    image: mood-service
+    depends_on:
+      - eureka-service
+    ports:
+      - 3002:3002
+  weather-service:
+    image: weather-service
+    depends_on:
+      - eureka-service
+    ports:
+      - 3003:3003
+  country-service:
+    image: country-service
+    depends_on:
+      - eureka-service
+    ports:
+      - 3001:3001
